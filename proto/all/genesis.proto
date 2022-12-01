@@ -1,0 +1,14 @@
+syntax = "proto3";
+package octalmage.all.all;
+
+import "gogoproto/gogo.proto";
+import "all/params.proto";
+// this line is used by starport scaffolding # genesis/proto/import
+
+option go_package = "github.com/octalmage/all/x/all/types";
+
+// GenesisState defines the all module's genesis state.
+message GenesisState {
+  Params params = 1 [(gogoproto.nullable) = false];
+  // this line is used by starport scaffolding # genesis/proto/state
+}
